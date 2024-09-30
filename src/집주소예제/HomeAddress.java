@@ -26,7 +26,8 @@ public class HomeAddress {
             int print_cnt = 0;
             // 숫자가 천의자리일 때
             if (num[i]/1000 != 0){
-                print_cnt = 3;
+                print_cnt = 3;      // 숫자 4개 사이의 공백 3개이므로 +3
+
                 //1000의자리가 1일때
                 if(num[i]/1000 == 1){
                     print_cnt += 2;
@@ -58,7 +59,8 @@ public class HomeAddress {
             } else {
                 // 숫자가 백의자리일때
                 if((num[i]/100)%10 != 0){
-                    print_cnt += 2;
+                    print_cnt += 2;     // 숫자 3개 사이의 공백 2개이므로 +2
+
                     //100의 자리가 1일때
                     if(num[i]/100 == 1){
                         print_cnt += 2;
@@ -83,7 +85,8 @@ public class HomeAddress {
                 } else{
                     // 숫자가 십의 자리일때
                     if((num[i]/10)%10 != 0){
-                        print_cnt += 1;
+                        print_cnt += 1;     // 숫자 2개 사이의 공백 1개이므로 +1
+
                         // 10의 자리가 1일때
                         if(num[i]/10 == 1){
                             print_cnt += 2;
