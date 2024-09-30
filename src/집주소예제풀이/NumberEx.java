@@ -21,6 +21,10 @@ public class NumberEx {
             if (num.equals("0")) break;
             // 입력받은 문자열 길이 만큼을 순회하면서 문자 추출 후 정수 자리수로 변환하여 자리수 추출
             for(int i = 0; i < num.length(); i++){
+
+                // charAt(int i) - '0'을 통해 char형의 문자들을 int형으로 변환시킬 수 있다.
+                // charAt(int index)로 추출한 숫자형 문자는 char형이므로 int형으로 변환 시 아스키코드로 변환된다.
+                // 따라서 '0'(48)을 빼주어야 의도한 리턴값을 얻을 수 있다.
                 sum += number[num.charAt(i) - '0'] + 1;    // + 1 은 각 숫자 앞의 공백
             }
             // 결과 값을 저장하고 배열 인덱스 증가
